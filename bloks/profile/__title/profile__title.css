@@ -4,8 +4,21 @@
     font-weight: 500;
     font-style: normal;
     font-size: 42px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
     text-align: left;
     line-height: 48px;
     max-width: 294px;
     color: #ffffff;
+}
+
+@media screen and (max-width: 320px) {
+    .profile__title {
+        font-size: 27px;
+        line-height: 33px;
+        text-align: center;
+        padding-left: 28px;
+        max-width: 189px;
+    }    
 }

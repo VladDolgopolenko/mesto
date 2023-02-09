@@ -18,12 +18,12 @@
                 <div class="profile__info">
                     <div class="profile__name">
                         <h1 class="profile__title">Жак-Ив Кусто</h1>
-                        <button class="profile__edit"></button>
+                        <button type="button" class="profile__edit"></button>
                     </div>
-                    <h2 class="profile__subtitle">Исследователь океана</h2>
+                    <p class="profile__subtitle">Исследователь океана</p>
                 </div>
             </div>
-            <button class="profile__add"></button>
+            <button type="button" class="profile__add"></button>
         </section>
 
         <section class="cards">
@@ -32,42 +32,42 @@
                     <img src="./images/castle.jpg" alt="Фотография замка на фоне гор" class="card__image">
                     <div class="card__bottom">
                         <h2 class="card__title">Карачаевск</h2>
-                        <div class="card__like"></div>
+                        <button class="card__like"></button>
                     </div>
                 </li>
                 <li class="card">
                     <img src="./images/hill.png" alt="Фотография холмов" class="card__image">
                     <div class="card__bottom">
                         <h2 class="card__title">Гора Эльбрус</h2>
-                        <div class="card__like"></div>
+                        <button class="card__like"></button>
                     </div>
                 </li>
                 <li class="card">
                     <img src="./images/mountain.png" alt="Фотография заснеженой горной вершины и леса" class="card__image">
                     <div class="card__bottom">
                         <h2 class="card__title">Домбай</h2>
-                        <div class="card__like"></div>
+                        <button class="card__like"></button>
                     </div>
                 </li>
                 <li class="card">
                     <img src="./images/hill.png" alt="Фотография холмов" class="card__image">
                     <div class="card__bottom">
                         <h2 class="card__title">Гора Эльбрус</h2>
-                        <div class="card__like"></div>
+                        <button class="card__like"></button>
                     </div>
                 </li>
                 <li class="card">
                     <img src="./images/mountain.png" alt="Фотография заснеженой горной вершины и леса" class="card__image">
                     <div class="card__bottom">
                         <h2 class="card__title">Домбай</h2>
-                        <div class="card__like"></div>
+                        <button class="card__like"></button>
                     </div>
                 </li>
                 <li class="card">
                     <img src="./images/castle.jpg" alt="Фотография замка на фоне гор" class="card__image">
                     <div class="card__bottom">
                         <h2 class="card__title">Карачаево-Черкессия</h2>
-                        <div class="card__like"></div>
+                        <button class="card__like"></button>
                     </div>
                 </li>
             </ul>
@@ -80,14 +80,14 @@
         <p class="footer__text">&copy; 2023 Mesto Russia</p>
     </footer>
 
-    <section class="popup">
+    <section class="popup popup_none">
         <div class="popup__container">
-            <button class="popup__close"></button>
-            <form class="popup__form" method="get">
+            <button type="reset" class="popup__close"></button>
+            <form class="popup__form" method="get" name="profileform">
                 <h2 class="popup__title">Редактировать профиль</h2>
-                <input type="text" class="popup__input popup__name">
-                <input type="text" class="popup__input popup__description">
-                <button class="popup__save">Сохранить</button>
+                <input type="text" name="nameinput" class="popup__input popup__name">
+                <input type="text" name="descinput" class="popup__input popup__description">
+                <button type="submit" class="popup__save">Сохранить</button>
             </form>
         </div>
     </section>

@@ -11,16 +11,16 @@ let popupForm = document.querySelector('.popup__form');
 
 /* Открытие popup */
 buttonEdit.addEventListener('click', function () {
-    popup.style.display = 'block';
+    popup.classList.remove('popup_none');
     popupName.value = profileName.textContent;
-    popupDesc.value = profileDesc.textContent;     
+    popupDesc.value = profileDesc.textContent;
 }
 )
 
 
 /* Закрытие popup */
 buttonClose.addEventListener('click', function () {
-    popup.style.display = 'none';
+    popup.classList.add('popup_none')
 }
 )
 
@@ -29,7 +29,7 @@ function popupSubmit (evt) {
     evt.preventDefault();
     profileName.textContent = popupName.value;
     profileDesc.textContent = popupDesc.value;
-    popup.style.display = 'none';
+    popup.classList.add('popup_none');
 }
 
 popupForm.addEventListener('submit', popupSubmit);

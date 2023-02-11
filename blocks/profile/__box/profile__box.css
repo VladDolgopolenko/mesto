@@ -6,7 +6,7 @@
     
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 762px) {
     .profile__box {
         flex-direction: column;
         gap: 26px;

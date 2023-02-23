@@ -8,8 +8,8 @@ let popupName = document.querySelector('.popup__input_text_name');
 let popupDesc = document.querySelector('.popup__input_text_desc'); 
 let popupForm = document.querySelector('.popup__form'); 
 
-let editClose = document.querySelector('.popup-profile__close');
-let cardClose = document.querySelector('.popup-card__close');
+let editClose = document.querySelector('.profile-popup__close');
+let cardClose = document.querySelector('.card-popup__close');
 let cardName = document.querySelector('.popup__input_text_namecard');
 let cardLink = document.querySelector('.popup__input_text_linkcard');
 let cardLike = document.querySelector('.card__like');
@@ -27,7 +27,7 @@ const cardtemplate = document.querySelector('#card-template').content;
 
 const openPopupPhoto = document.querySelector('.image-popup__photo');
 const openPopupText = document.querySelector('.image-popup__text');
-const closePopupPhoto = document.querySelector('.popup-image__close');
+const closePopupPhoto = document.querySelector('.image-popup__close');
 
 
 /* Открытие popup профиля */

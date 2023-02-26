@@ -19,14 +19,14 @@ const buttonCreate = document.querySelector('.profile__add');
 const profilePopup = document.querySelector('.profile-popup')
 const cardPopup = document.querySelector('.card-popup');
 
-const buttonOpenPopupImg = document.querySelector('.image-popup')
+const imagePopup = document.querySelector('.image-popup')
 
 const cards = document.querySelector('.cards');
 const cardsList = document.querySelector('.cards__list');
 const cardtemplate = document.querySelector('#card-template').content;
 
-const openPopupPhoto = document.querySelector('.image-popup__photo');
-const openPopupText = document.querySelector('.image-popup__text');
+const popupPhoto = document.querySelector('.image-popup__photo');
+const popupText = document.querySelector('.image-popup__text');
 const buttonClosePopupPhoto = document.querySelector('.image-popup__close');
 
 /* Общая функция открытия popup */
@@ -66,10 +66,10 @@ popupForm.addEventListener('submit', submitProfilePopup);
 /* Попап картинки */
 function openImgPopup(evt) {
   
-  openPopupPhoto.src = evt.target.src;
-  openPopupPhoto.alt = evt.target.alt;
-  openPopupText.textContent = evt.target.alt;
-  openPopup(buttonOpenPopupImg);
+  popupPhoto.src = evt.target.src;
+  popupPhoto.alt = evt.target.alt;
+  popupText.textContent = evt.target.alt;
+  openPopup(imagePopup);
 }
 
 /* Заполнение 6 карточек элементами из массива */
@@ -156,7 +156,7 @@ buttonClose.addEventListener('click', function() {
 
 
 buttonClosePopupPhoto.addEventListener('click', function() {
-  closePopup(buttonOpenPopupImg);
+  closePopup(imagePopup);
 })
 
 

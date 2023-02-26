@@ -25,14 +25,20 @@ const cards = document.querySelector('.cards');
 const cardsList = document.querySelector('.cards__list');
 const cardtemplate = document.querySelector('#card-template').content;
 
-const buttonOpenPopupPhoto = document.querySelector('.image-popup__photo');
-const buttonOpenPopupText = document.querySelector('.image-popup__text');
+const openPopupPhoto = document.querySelector('.image-popup__photo');
+const openPopupText = document.querySelector('.image-popup__text');
 const buttonClosePopupPhoto = document.querySelector('.image-popup__close');
 
 /* Общая функция открытия popup */
 function openPopup(element) {
   element.classList.add('popup_opened');
 }
+
+/* Общая функция закрытия popup */
+function closePopup(element) {
+  element.classList.remove('popup_opened');
+}
+
 
 
 /* Открытие popup профиля */
@@ -46,24 +52,24 @@ buttonEdit.addEventListener('click', function () {
 
 
 
-
 /* Сохранение формы профиля*/
-function popupSubmit (evt) {
+function submitProfilePopup (evt) {
     evt.preventDefault();
     profileName.textContent = popupName.value;
     profileDesc.textContent = popupDesc.value;
-    popup.classList.remove('popup_opened');
+
+    closePopup(popup);
 }
 
-popupForm.addEventListener('submit', popupSubmit);
+popupForm.addEventListener('submit', submitProfilePopup);
 
 /* Попап картинки */
 function openImgPopup(evt) {
-  //buttonOpenPopupImg.classList.add('popup_opened');
+  
+  openPopupPhoto.src = evt.target.src;
+  openPopupPhoto.alt = evt.target.alt;
+  openPopupText.textContent = evt.target.alt;
   openPopup(buttonOpenPopupImg);
-  buttonOpenPopupPhoto.src = evt.target.src;
-  buttonOpenPopupPhoto.alt = evt.target.alt;
-  buttonOpenPopupText.textContent = evt.target.alt;
 }
 
 /* Заполнение 6 карточек элементами из массива */
@@ -138,10 +144,7 @@ buttonCreate.addEventListener('click', function () {
   openPopup(cardPopup);
 })
 
-/* Закрытие popup */
-function closePopup(element) {
-  element.classList.remove('popup_opened');
-}
+
 /* Вызов закрытия попапа карточек */
 cardClose.addEventListener('click', function() {
   closePopup(cardPopup);
